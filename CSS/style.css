@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 80%;
+    height: 500px;
+    border:5px solid #000000;
+    border-bottom: 15px solid#097721;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#073244, #5b8192);
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+.bicha{
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    animation: bicha-animation 6s infinite linear;
+
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear ;
+}
+
+
+.bloco{
+    position: absolute;
+    width: 150px;
+    animation: bloco-animation 20s infinite linear;
+    top: 200px;
+}
+
+.score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0c0707;
+    background-color: #e5f501;
+    padding: 5px 10px; 
+    border: 2px solid #000000; 
+    border-radius: 10px; 
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+.estrelas{
+    width: 100%;
+    height: 500px;
+}
+
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    20%{
+        bottom: 125px;
+    }
+    40%{
+        bottom: 140px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 140px;
+    }
+    80%{
+        bottom: 125px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation  {
+    from{
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes bicha-animation {
+    from{
+        right: -50px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes bloco-animation {
+    from{
+        right: -200px;
+    }
+    to{
+        right: 100%;
+    }
+}
